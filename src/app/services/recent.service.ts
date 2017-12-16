@@ -8,7 +8,7 @@ export class RecentService {
 
   constructor(private http: HttpClient) {
     this.http.get('http://localhost:3000/api/getall').subscribe( data => {
-      this.recent = data['res']
+      this.recent = data['result']
     }); // End of http req
    } // End of constructor
 
