@@ -9,16 +9,17 @@ import { RecentService } from '../../services/recent.service';
 })
 export class RecentAttractionsComponent implements OnInit {
 
-  recent: string[];
+  recent: any;
 
   constructor(private recentService: RecentService) { }
 
   ngOnInit() {
-    console.log(this.getRecent());
+    this.getRecent();
   }
 
   getRecent(): void {
-    this.recent = this.recentService.getRecent();
+    this.recentService.getRecent()
+    .subscribe(data => this.recent = data );
   }
 
 }
