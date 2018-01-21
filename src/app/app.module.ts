@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RecentAttractionsComponent } from './components/recent-attractions/recent-attractions.component';
+import { DestinationsComponent } from './components/destinations/destinations.component';
 
 import { RecentService } from './services/recent.service';
 
 
 const routes: Routes = [
-  { path: 'Home', component: AppComponent }
+  { path: 'Home', component: AppComponent },
+  { path: 'Destinations', component: DestinationsComponent }
 ]
 
 
@@ -20,7 +22,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    RecentAttractionsComponent
+    RecentAttractionsComponent,
+    DestinationsComponent
   ],
   imports: [
     BrowserModule,
