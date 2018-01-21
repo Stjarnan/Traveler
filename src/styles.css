@@ -442,8 +442,20 @@ Styling
 
 =================================*/
 
+main .card {
+  position: relative;
+}
+
+.card div {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  z-index: 10;
+}
+
 main .card img {
   max-width: 100%;
+  opacity: 0.5;
 }
 
 main .card h3,
@@ -451,4 +463,13 @@ main .card span {
   display: block;
   text-align: center;
   margin-bottom: 0;
+  text-shadow: #000 1px 1px 2px;
+}
+
+main .card h3 {
+  font-size: 32px;
+}
+
+main .card span {
+  font-size: 26px;
 }
