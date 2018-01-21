@@ -23,6 +23,12 @@ header nav ul li {
     text-align: center;
 }
 
+header nav ul li a {
+    text-decoration: none;
+    color: #FDFFFC;
+    font-weight: 700;
+}
+
 header nav ul li:last-child {
     padding-bottom: 20px;
     margin-bottom: 0;
