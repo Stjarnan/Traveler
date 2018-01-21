@@ -433,3 +433,22 @@ body {
   th {
     padding: 0;
   }
+
+
+
+/* =============================
+
+Styling
+
+=================================*/
+
+main .card img {
+  max-width: 100%;
+}
+
+main .card h3,
+main .card span {
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
+}

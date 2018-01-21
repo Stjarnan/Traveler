@@ -1,6 +1,5 @@
 <main>
-  <h2>Recent Destinations</h2>
-  <div *ngFor="let item of recent">
+  <div class ="card" *ngFor="let item of recent">
     <h3>{{ item.destination }}</h3>
     <span>{{ item.country }}</span>
     <img src="{{ item.image }}">
