@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router'
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -9,6 +10,12 @@ import { RecentAttractionsComponent } from './components/recent-attractions/rece
 
 import { RecentService } from './services/recent.service';
 
+
+const routes: Routes = [
+  { path: 'Home', component: AppComponent }
+]
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +24,10 @@ import { RecentService } from './services/recent.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(
+      routes
+    )
   ],
   providers: [
     RecentService
