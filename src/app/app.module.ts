@@ -8,13 +8,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RecentAttractionsComponent } from './components/recent-attractions/recent-attractions.component';
 import { DestinationsComponent } from './components/destinations/destinations.component';
-
 import { RecentService } from './services/recent.service';
+import { CountriesComponent } from './components/countries/countries.component';
 
 
 const routes: Routes = [
-  { path: 'Home', component: AppComponent },
-  { path: 'Destinations', component: DestinationsComponent }
+  { path: 'Home', component: RecentAttractionsComponent },
+  { path: 'Destinations', component: DestinationsComponent },
+  { path: 'Countries', component: CountriesComponent }
 ]
 
 
@@ -23,7 +24,8 @@ const routes: Routes = [
     AppComponent,
     HeaderComponent,
     RecentAttractionsComponent,
-    DestinationsComponent
+    DestinationsComponent,
+    CountriesComponent
   ],
   imports: [
     BrowserModule,
