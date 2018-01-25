@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DestinationsComponent implements OnInit {
 
+  searchVal: string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  searchDB(): void {
+    console.log(this.searchVal);
   }
 
 }
