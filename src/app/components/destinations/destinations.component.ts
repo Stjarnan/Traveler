@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DestinationsComponent implements OnInit {
 
   searchVal: string;
+  data: string;
 
   constructor() { }
 
@@ -15,7 +16,7 @@ export class DestinationsComponent implements OnInit {
   }
 
   searchDB(): void {
-    console.log(this.searchVal);
+    this.data = this.searchVal;
   }
 
 }
