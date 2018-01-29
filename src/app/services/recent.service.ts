@@ -11,4 +11,8 @@ export class RecentService {
      return this.http.get('http://localhost:3000/api/getall');
    }
 
+   getByDestination(query): Observable<any> {
+     return this.http.get('http://localhost:3000/api/destination/' + query );
+   }
+
 }
