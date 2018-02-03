@@ -10,7 +10,7 @@ import { RecentService } from '../../services/recent.service';
 export class DestinationsComponent implements OnInit {
 
   searchVal: string;
-  data: string;
+  destinations: string;
 
   constructor(private recentService: RecentService ) { }
 
@@ -18,9 +18,8 @@ export class DestinationsComponent implements OnInit {
   }
 
   searchDB(): void {
-    this.data = this.searchVal;
     this.recentService.getByDestination(this.searchVal)
-    .subscribe( data => console.log(data));
+    .subscribe( data => this.destinations = data );
   }
 
 }
