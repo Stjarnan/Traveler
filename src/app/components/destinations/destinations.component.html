@@ -1,2 +1,10 @@
-<input type="text" placeholder="Search" id="search" [(ngModel)]="searchVal" (keyup)="searchDB()">
-<div *ngFor="let destination of destinations"><p>ppp</p></div>
+<main>
+    <input type="text" placeholder="Search" id="search" [(ngModel)]="searchVal" (keyup)="searchDB()">
+    <div *ngFor="let destination of destinations" class="card">
+        <div>
+            <h3>{{ destination.destination }}</h3>
+            <span>{{ destination.country }}</span>
+        </div>
+        <img src="{{ destination.image }}">
+    </div>
+</main>
