@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecentService } from '../../services/recent.service';
 
 @Component({
   selector: 'app-countries',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountriesComponent implements OnInit {
 
-  constructor() { }
+  searchVal: string;
+  countries: string;
+
+  constructor(private recentService: RecentService ) { }
 
   ngOnInit() {
+  }
+
+  searchDB(): void {
+    this.recentService.getByDestination(this.searchVal)
+    .subscribe( data => this.countries = data );
   }
 
 }
