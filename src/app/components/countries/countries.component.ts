@@ -17,7 +17,7 @@ export class CountriesComponent implements OnInit {
   }
 
   searchDB(): void {
-    this.recentService.getByDestination(this.searchVal)
+    this.recentService.getByCountry(this.searchVal)
     .subscribe( data => this.countries = data );
   }
 
