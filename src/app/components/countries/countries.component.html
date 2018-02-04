@@ -1,4 +1,5 @@
 <main>
+    <h2>Search Countries</h2>
     <input type="text" placeholder="Search" id="search" [(ngModel)]="searchVal" (keyup)="searchDB()">
     <div *ngFor="let country of countries" class="card">
         <div>
