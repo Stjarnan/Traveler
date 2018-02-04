@@ -11,13 +11,15 @@ import { RecentAttractionsComponent } from './components/recent-attractions/rece
 import { DestinationsComponent } from './components/destinations/destinations.component';
 import { RecentService } from './services/recent.service';
 import { CountriesComponent } from './components/countries/countries.component';
+import { DestinationComponent } from './components/destination/destination.component';
 
 
 const routes: Routes = [
   { path: '', component: RecentAttractionsComponent },
   { path: 'Home', component: RecentAttractionsComponent },
   { path: 'Destinations', component: DestinationsComponent },
-  { path: 'Countries', component: CountriesComponent }
+  { path: 'Countries', component: CountriesComponent },
+  { path: 'Destination/:id', component: DestinationComponent }
 ]
 
 
@@ -27,7 +29,8 @@ const routes: Routes = [
     HeaderComponent,
     RecentAttractionsComponent,
     DestinationsComponent,
-    CountriesComponent
+    CountriesComponent,
+    DestinationComponent
   ],
   imports: [
     BrowserModule,
