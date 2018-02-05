@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-destination',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DestinationComponent implements OnInit {
 
-  constructor() { }
+  destination: string;
+  country: string;
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
+    this.route
+      .queryParams
+      .subscribe(params => {
+        this.destination = params['id'];
+        this.country = params['country'];
+      });
   }
 
 }

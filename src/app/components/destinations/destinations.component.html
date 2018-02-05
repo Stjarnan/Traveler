@@ -2,7 +2,7 @@
     <h2>Search Destinations</h2>
     <input type="text" placeholder="Search" id="search" [(ngModel)]="searchVal" (keyup)="searchDB()">
     <div *ngFor="let destination of destinations" class="card">
-        <a [routerLink]="['/Destination', destination.destination]">
+        <a [routerLink]="['/Destination', destination.destination]" [queryParams]="{ id: destination.destination, country: destination.country }">
             <div>
                 <h3>{{ destination.destination }}</h3>
                 <span>{{ destination.country }}</span>
