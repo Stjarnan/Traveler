@@ -1,6 +1,7 @@
 <main>
   <div class ="card" *ngFor="let item of recent">
-    <a [routerLink]="['/Destination', item.destination]">
+    <a [routerLink]="['/Destination', item.destination]"
+    [queryParams]="{ id: destination.destination, country: destination.country, image: destination.image, description: destination.description }">
     <div>
       <h3>{{ item.destination }}</h3>
       <span>{{ item.country }}</span>
