@@ -3,7 +3,7 @@
     <input type="text" placeholder="Search" id="search" [(ngModel)]="searchVal" (keyup)="searchDB()">
     <div *ngFor="let country of countries" class="card">
         <a [routerLink]="['/Destination', country.destination]"
-        [queryParams]="{ id: destination.destination, country: destination.country, image: destination.image, description: destination.description }">
+        [queryParams]="{ id: country.destination, country: country.country, image: country.image, description: country.description }">
         <div>
             <h3>{{ country.destination }}</h3>
             <span>{{ country.country }}</span>

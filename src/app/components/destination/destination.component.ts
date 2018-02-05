@@ -10,6 +10,8 @@ export class DestinationComponent implements OnInit {
 
   destination: string;
   country: string;
+  image: string;
+  description: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,6 +23,8 @@ export class DestinationComponent implements OnInit {
       .subscribe(params => {
         this.destination = params['id'];
         this.country = params['country'];
+        this.image = params['image'];
+        this.description = params['description']
       });
   }
 
