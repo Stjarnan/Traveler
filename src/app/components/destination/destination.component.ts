@@ -14,7 +14,7 @@ export class DestinationComponent implements OnInit {
   country: string;
   image: string;
   description: string;
-  attractions: any;
+  data: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,6 +32,6 @@ export class DestinationComponent implements OnInit {
 
   ngOnInit() {
     this.recentService.getByDestination(this.destination)
-      .subscribe( data => this.attractions = data );
+      .subscribe( data => this.data = data[0].attractions );
   }
 }

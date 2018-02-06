@@ -5,7 +5,7 @@
     <img src="{{ image }}">
   </div>
   <p>{{ description }}</p>
-  <div  *ngFor="let attraction of attractions" class="attractionCard">
-    <h3>item</h3>
+  <div  *ngFor="let attraction of data" class="attractionCard">
+    <h3>{{ attraction.name }}</h3>
   </div>
 </main>
