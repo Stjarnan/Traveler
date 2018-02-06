@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { RecentService } from '../../services/recent.service';
+
 @Component({
   selector: 'app-destination',
   templateUrl: './destination.component.html',
@@ -12,13 +14,13 @@ export class DestinationComponent implements OnInit {
   country: string;
   image: string;
   description: string;
+  attractions: any;
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router) { }
-
-  ngOnInit() {
-    this.route
+    private router: Router,
+    private recentService: RecentService) {
+      this.route
       .queryParams
       .subscribe(params => {
         this.destination = params['id'];
@@ -26,6 +28,10 @@ export class DestinationComponent implements OnInit {
         this.image = params['image'];
         this.description = params['description']
       });
-  }
+     }
 
+  ngOnInit() {
+    this.recentService.getByDestination(this.destination)
+      .subscribe( data => this.attractions = data );
+  }
 }
