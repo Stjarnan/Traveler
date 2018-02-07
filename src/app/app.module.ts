@@ -12,6 +12,7 @@ import { DestinationsComponent } from './components/destinations/destinations.co
 import { RecentService } from './services/recent.service';
 import { CountriesComponent } from './components/countries/countries.component';
 import { DestinationComponent } from './components/destination/destination.component';
+import { NoRouteFoundComponent } from './components/no-route-found/no-route-found.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'Home', component: RecentAttractionsComponent },
   { path: 'Destinations', component: DestinationsComponent },
   { path: 'Countries', component: CountriesComponent },
-  { path: 'Destination/:id', component: DestinationComponent }
+  { path: 'Destination/:id', component: DestinationComponent },
+  { path: '**', component: NoRouteFoundComponent }
 ]
 
 
@@ -30,7 +32,8 @@ const routes: Routes = [
     RecentAttractionsComponent,
     DestinationsComponent,
     CountriesComponent,
-    DestinationComponent
+    DestinationComponent,
+    NoRouteFoundComponent
   ],
   imports: [
     BrowserModule,
