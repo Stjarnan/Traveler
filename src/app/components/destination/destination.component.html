@@ -7,5 +7,9 @@
   <p>{{ description }}</p>
   <div  *ngFor="let attraction of data" class="attractionCard">
     <h3>{{ attraction.name }}</h3>
+    <div>
+      <p>{{ attraction.description }}</p>
+      <a href="{{ attraction.information }}" target="_blank">Take a look!</a>
+    </div>
   </div>
 </main>
