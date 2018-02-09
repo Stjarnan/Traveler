@@ -484,3 +484,15 @@ main .card h3 {
 main .card span {
   font-size: 26px;
 }
+
+@media screen and (min-width: 768px) {
+  main .card {
+    display: inline-block;
+    width: 32%;
+    height: 192px;
+  }
+
+  main .card img {
+    height: 192px;
+  }
+}
