@@ -442,8 +442,19 @@ Styling
 
 =================================*/
 
+/* =============================
+
+Main
+
+=================================*/
+
+
 main .card {
   position: relative;
+}
+
+main .card a {
+  color: #FDFFFC;
 }
 
 .card div {
