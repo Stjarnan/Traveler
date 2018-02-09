@@ -1,0 +1,35 @@
+
+main {
+    background-color: #fff;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+}
+
+.destinationBanner {
+    text-align: center;
+}
+
+.destinationBanner h2 {
+    margin: 40px 0 0;
+    font-size: 32px;
+}
+
+.destinationBanner span {
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 22px;
+}
+
+.destinationBanner img {
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+main p {
+    width: 80%;
+    margin: 0 auto;
+}
