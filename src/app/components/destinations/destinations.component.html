@@ -1,6 +1,8 @@
+<h2 class="searchHeading">Search Destinations</h2>
+<div class="filter">
+    <input type="text" placeholder="Search for Destinations" id="search" [(ngModel)]="searchVal" (keyup)="searchDB()">
+</div>
 <main>
-    <h2>Search Destinations</h2>
-    <input type="text" placeholder="Search" id="search" [(ngModel)]="searchVal" (keyup)="searchDB()">
     <div *ngFor="let destination of destinations" class="card">
         <a [routerLink]="['/Destination', destination.destination]"
         [queryParams]="{ id: destination.destination, country: destination.country, image: destination.image, description: destination.description }">

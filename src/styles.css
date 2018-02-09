@@ -448,9 +448,22 @@ Main
 
 =================================*/
 
+.searchHeading {
+  text-align: center;
+}
+
+.filter {
+  margin: 0 auto;
+  width: 66%;
+}
+
+.filter input {
+  width: 100%;
+}
 
 main .card {
   position: relative;
+  margin-top: 20px;
 }
 
 main .card a {
@@ -485,20 +498,34 @@ main .card span {
   font-size: 26px;
 }
 
+/* =============================
+
+Media
+
+=================================*/
+
+
 @media screen and (min-width: 768px) {
+
+  .filter {
+    max-width: 600px;
+  }
 
   main {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   main .card {
     display: inline-block;
-    width: 32%;
+    width: 256px;
     height: 192px;
+    margin: 10px 0 10px;
   }
 
   main .card img {
     height: 192px;
   }
+
 }
