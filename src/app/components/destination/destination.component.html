@@ -1,17 +1,16 @@
 <main>
-  <div class="destinationBanner">
+  <div class="destinationBanner" [style.background-image]="'url(' + image + ')'">
     <h2>{{ destination }}</h2>
     <span>{{ country }}</span>
-    <img src="{{ image }}">
   </div>
   <p>{{ description }}</p>
   <h3 class="attractionsHeading">Attractions</h3>
   <div  *ngFor="let attraction of data" class="attractionCard">
-    <h3>{{ attraction.name }}</h3>
+    <h4>{{ attraction.name }}</h4>
     <div>
       <div>
         <p>{{ attraction.description }}</p>
-        <a href="{{ attraction.information }}" target="_blank">Take a look!</a>
+        <a href="{{ attraction.information }}" target="_blank">More Info!</a>
       </div>
       <img src="{{ attraction.image }}">
     </div>
