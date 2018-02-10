@@ -92,7 +92,9 @@ main .attractionsHeading {
     }
 
     .attractionCard {
-        width: 50%;
+        width: 390px;
+        box-sizing: border-box;
+        border: 1px solid #333;
     }
 
 }
