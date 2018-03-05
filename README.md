@@ -6,6 +6,14 @@ This is the front end for my other project, 'TravelerAPI'.
 
 Run `ng serve` for a dev server. The app will automatically reload if you change any of the source files.
 
+## Status
+
+This project is not currently under development, but if development would be continued some of the items on the to do list would be:
+
+* Ability for users to sign in
+* Ability to add attractions and destinations
+* Watch lists for users to be able to bookmark places they want to visit
+
 
 ## Further help
 
